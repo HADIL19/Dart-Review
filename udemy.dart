@@ -9,9 +9,10 @@ void main() {
   var age = DateTime.now().year - int.parse(birthYear!);
   print('your age is $age');*/
   var a1 = [1, 2.5, 3.2, 4, 5, 6];
+  print(a1.any((element) => element % 2 == 0));
   // a1.removeWhere((element) => element % 2 == 0);
   //a1.retainWhere((element) => element % 2 == 0);
-  print(a1);
+  /*print(a1);
 
   var b1 = a1.where((element) => element % 2 == 0);
   var b2 = a1.firstWhere((element) => element % 2 == 0, orElse: () => 0);
@@ -35,5 +36,43 @@ void main() {
   print(e);
   b1.forEach((element) {
     print(element);
+  });*/
+  //iterable:
+  // object contains data that can be iterated
+  //examples (String,List,Set,Map)
+  List<int> l = [4, 5, 6, 7, 8, 9];
+  Iterable<int> k = [4, 5, 6, 7, 8, 9];
+  var j = l.toList();
+  j.forEach((element) {
+    print(element);
   });
+  var li = [
+    [2, 4, 6],
+    [8, 9, 4]
+  ];
+  var s = {4, 5, 6, 7, 8, 9}; //set
+  var m = {9: 'a', 8: 'b', 7: 'c'}; //map
+
+  for (var item in l) {
+    print(item);
+  }
+  /*...//spread operator*/
+  var list0 = [0, 0, 0, 0, 0];
+  var list1 = [
+    0,
+    if (list0.length == 0) ...list0,
+    ...?l //null aware spread operator
+  ];
+  print(list1);
+  List<List<int>> list4 = [
+    [1, 2, 3]
+  ]; // list of lists,maps,sets, of integers
+  var sum = 0.0;
+  List b = a1.map((e) {
+    sum += e;
+    return e;
+  }).toList(); // result in  [] not ()
+  print(b);
+  print(sum);
+  // map joz ela all elements
 }
