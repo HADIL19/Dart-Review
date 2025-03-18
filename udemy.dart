@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  /*
+  
   print(Platform.executable);
   print(Platform.numberOfProcessors);
   print(Platform.operatingSystem);
@@ -9,34 +9,34 @@ void main() {
   print(Platform.version); //dart version
   print(Platform.script);
   print('-------------------------------------');
-  print(Platform.isAndroid); // importanat plus utilisé
+  print(Platform.isAndroid); // used a lot
   print(Platform.isFuchsia);
   print(Platform.isWindows);
   print(Platform.isLinux);
   print(Platform.isMacOS);
-  print(Platform.isIOS); //important plus utilisé
+  print(Platform.isIOS); //used a lot 
   Platform.isIOS ? print('IOS') : print('NOT IOS');
   print(Platform.environment);
   print('-------------------------------------');
   Platform.environment.forEach((key, value) {
     print('$key : $value');
   });
-  //print(Platform.environment['PATH']);
+  print(Platform.environment['PATH']);
   Platform.environment.forEach((key, _) {
     print('$key: ${Platform.environment[key]}');
   });
-  /*print('enter your name');
+  print('enter your name');
   var name = stdin.readLineSync();
   print('your names is $name');
   print('enter your birth year');
   var birthYear = stdin.readLineSync();
   var age = DateTime.now().year - int.parse(birthYear!);
   print('your age is $age');*/
-  //var a1 = [1, 2.5, 3.2, 4, 5, 6];
-  // print(a1.any((element) => element % 2 == 0));
-  // a1.removeWhere((element) => element % 2 == 0);
-  //a1.retainWhere((element) => element % 2 == 0);
-  /*print(a1);
+  var a1 = [1, 2.5, 3.2, 4, 5, 6];
+   print(a1.any((element) => element % 2 == 0));
+   a1.removeWhere((element) => element % 2 == 0);
+  a1.retainWhere((element) => element % 2 == 0);
+  print(a1);
 
   var b1 = a1.where((element) => element % 2 == 0);
   var b2 = a1.firstWhere((element) => element % 2 == 0, orElse: () => 0);
@@ -60,11 +60,11 @@ void main() {
   print(e);
   b1.forEach((element) {
     print(element);
-  });*/
-  //iterable:
+  });
+ // iterable:
   // object contains data that can be iterated
   //examples (String,List,Set,Map)
-  /* List<int> l = [4, 5, 6, 7, 8, 9];
+   List<int> l = [4, 5, 6, 7, 8, 9];
   Iterable<int> k = [4, 5, 6, 7, 8, 9];
   var j = l.toList();
   j.forEach((element) {
