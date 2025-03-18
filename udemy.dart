@@ -1,6 +1,30 @@
 import 'dart:io';
 
 void main() {
+  /*
+  print(Platform.executable);
+  print(Platform.numberOfProcessors);
+  print(Platform.operatingSystem);
+  print(Platform.operatingSystemVersion);
+  print(Platform.version); //dart version
+  print(Platform.script);
+  print('-------------------------------------');
+  print(Platform.isAndroid); // importanat plus utilisé
+  print(Platform.isFuchsia);
+  print(Platform.isWindows);
+  print(Platform.isLinux);
+  print(Platform.isMacOS);
+  print(Platform.isIOS); //important plus utilisé
+  Platform.isIOS ? print('IOS') : print('NOT IOS');
+  print(Platform.environment);
+  print('-------------------------------------');
+  Platform.environment.forEach((key, value) {
+    print('$key : $value');
+  });
+  //print(Platform.environment['PATH']);
+  Platform.environment.forEach((key, _) {
+    print('$key: ${Platform.environment[key]}');
+  });
   /*print('enter your name');
   var name = stdin.readLineSync();
   print('your names is $name');
@@ -8,8 +32,8 @@ void main() {
   var birthYear = stdin.readLineSync();
   var age = DateTime.now().year - int.parse(birthYear!);
   print('your age is $age');*/
-  var a1 = [1, 2.5, 3.2, 4, 5, 6];
-  print(a1.any((element) => element % 2 == 0));
+  //var a1 = [1, 2.5, 3.2, 4, 5, 6];
+  // print(a1.any((element) => element % 2 == 0));
   // a1.removeWhere((element) => element % 2 == 0);
   //a1.retainWhere((element) => element % 2 == 0);
   /*print(a1);
@@ -40,7 +64,7 @@ void main() {
   //iterable:
   // object contains data that can be iterated
   //examples (String,List,Set,Map)
-  List<int> l = [4, 5, 6, 7, 8, 9];
+  /* List<int> l = [4, 5, 6, 7, 8, 9];
   Iterable<int> k = [4, 5, 6, 7, 8, 9];
   var j = l.toList();
   j.forEach((element) {
@@ -74,5 +98,13 @@ void main() {
   }).toList(); // result in  [] not ()
   print(b);
   print(sum);
-  // map joz ela all elements
+  // map joz ela all elements*/*/
+  print(int.parse('2') + 5);
+  '2'.parseInt();
+}
+
+extension NumberParsing on String {
+  parseInt() {
+    return int.parse(this);
+  }
 }
