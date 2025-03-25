@@ -115,4 +115,13 @@ extension NumberParsing on String {
   //http dart pub add http
   // http flutter pub add http
   // pubspec.yaml dependencies: http: ^0.13.3
+  // m1 -extension Pubspec Assist 
+  //commande palette
+  // search for Pubspec Assist 
+  // add package name1, name2 .... 
+  //add in file.dart import 'package:http/http.dart';
+  // m2- without Pupspec Assist, with dart , commande palette 
+  // dart: add Dependency 
+  // select the library 
+  // all is set for you <3
 }
