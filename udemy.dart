@@ -107,4 +107,12 @@ extension NumberParsing on String {
   parseInt() {
     return int.parse(this);
   }
+  
+  // Dart Packages
+  // 1- pub.dev
+  // 2- dart packages
+  // 3- flutter packages
+  //http dart pub add http
+  // http flutter pub add http
+  // pubspec.yaml dependencies: http: ^0.13.3
 }
