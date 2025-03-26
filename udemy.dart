@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main() {
+
   
   print(Platform.executable);
   print(Platform.numberOfProcessors);
@@ -124,4 +125,19 @@ extension NumberParsing on String {
   // dart: add Dependency 
   // select the library 
   // all is set for you <3
+}
+Stirng? colorFavorite = null ; // either String or null it can be null or string
+ 
+  setBackgroundColor(colorFavorite);
+}
+String backgroundColor= "";
+setBackgroundColor(String? color){
+   if (color == null) return ;
+  backgroundColor = color! ;// this can't be null so accpet it 
+  print(backgroundColor);
+  //null nullability 
+  //never nothing
+  //always something
+  // soundness null-safety : 
+  // compile time run time 
 }
