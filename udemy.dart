@@ -1,7 +1,5 @@
 import 'dart:io';
-
 void main() {
-
   
   print(Platform.executable);
   print(Platform.numberOfProcessors);
@@ -32,7 +30,7 @@ void main() {
   print('enter your birth year');
   var birthYear = stdin.readLineSync();
   var age = DateTime.now().year - int.parse(birthYear!);
-  print('your age is $age');*/
+  print('your age is $age');
   var a1 = [1, 2.5, 3.2, 4, 5, 6];
    print(a1.any((element) => element % 2 == 0));
    a1.removeWhere((element) => element % 2 == 0);
@@ -99,7 +97,7 @@ void main() {
   }).toList(); // result in  [] not ()
   print(b);
   print(sum);
-  // map joz ela all elements*/*/
+  // map joz ela all elements
   print(int.parse('2') + 5);
   '2'.parseInt();
 }
@@ -125,13 +123,13 @@ extension NumberParsing on String {
   // dart: add Dependency 
   // select the library 
   // all is set for you <3
-}
-Stirng? colorFavorite = null ; // either String or null it can be null or string
+
+//Stirng? colorFavorite = null ; // either String or null it can be null or string
  
-  setBackgroundColor(colorFavorite);
+  //setBackgroundColor(colorFavorite);
 }
 String backgroundColor= "";
-setBackgroundColor(String? color){
+setBackgroundColorNullable(String? color){
    if (color == null) return ;
   backgroundColor = color! ;// this can't be null so accpet it 
   print(backgroundColor);
@@ -140,4 +138,34 @@ setBackgroundColor(String? color){
   //always something
   // soundness null-safety : 
   // compile time run time 
+  // null safety :
+
+  /* required & late keywords*/
+  var hadil = Person(age: 21, favoriteColor: "blue");
+  print(hadil.age);
+  print(hadil.favoriteColor);
+
+  hadil.favoriteColor = "purple";
+
+  setBackgroundColorNullable(hadil.favoriteColor!); // this cannot be null
+}
+
+class Person {
+  int age;
+  late int age2; // late keyword
+  // late keyword : it will be initialized latern u promise it will be initialized later
+  String? favoriteColor =
+      null; // either String or null it can be null or string
+  Person({required this.age, this.favoriteColor}) {
+    // constructor opetoinal parameter
+    // required this.age faut le remplir
+    // par contre c'est pas la peine de faire required pour favoriteColor car il est declarer nullable
+
+    age2 = 21;
+    age2 = age2 - 2;
+  }
+}
+
+setBackgroundColor(String color) {
+  print(color);
 }
